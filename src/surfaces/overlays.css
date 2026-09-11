@@ -1,0 +1,11 @@
+:is(.theme-dark, .theme-light) :is([role="menu"], [role="listbox"]) { background: var(--tl-raised); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) [role="menu"] { box-shadow: var(--tl-shadow); }
+:is(.theme-dark, .theme-light) [role="menuitem"] { border-radius: max(2px, calc(var(--tl-radius) / 2)); }
+:is(.theme-dark, .theme-light) [role="dialog"] { background-color: var(--tl-raised); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is(:is([class^="tooltip_"], [class*=" tooltip_"]), :is([class^="autocomplete_"], [class*=" autocomplete_"]), :is([class^="messagesPopoutWrap_"], [class*=" messagesPopoutWrap_"]), :is([class^="containerRecentMentions_"], [class*=" containerRecentMentions_"]), :is([class^="searchResultsWrap_"], [class*=" searchResultsWrap_"]), :is([class^="emojiPicker_"], [class*=" emojiPicker_"])) { border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is(:is([class^="autocomplete_"], [class*=" autocomplete_"]), :is([class^="messagesPopoutWrap_"], [class*=" messagesPopoutWrap_"]), :is([class^="containerRecentMentions_"], [class*=" containerRecentMentions_"])) { background: var(--tl-raised); box-shadow: var(--tl-shadow); }
+:is(.theme-dark, .theme-light) :is(:is([class^="userPopoutOuter_"], [class*=" userPopoutOuter_"]), :is([class^="userProfileOuter_"], [class*=" userProfileOuter_"])) { border-radius: var(--tl-radius); }
+/* Profile palettes, banners, status badges and premium decoration are preserved. */
+
+/* Inbox redesign exposes a dialog role but no stable container prefix. */
+:is(.theme-dark, .theme-light) [role="dialog"]:has([class*="inboxTitle_"]) { border-radius: var(--tl-radius); overflow: clip; }

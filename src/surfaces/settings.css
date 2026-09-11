@@ -1,0 +1,14 @@
+:is(.theme-dark, .theme-light) :is(:is([class^="standardSidebarView_"], [class*=" standardSidebarView_"]), :is([class^="contentRegion_"], [class*=" contentRegion_"])) { background: var(--tl-surface); }
+:is(.theme-dark, .theme-light) :is([class^="sidebarRegion_"], [class*=" sidebarRegion_"]) { background: var(--tl-canvas); }
+:is(.theme-dark, .theme-light) :is(:is([class^="itemCard_"], [class*=" itemCard_"]), :is([class^="connectContainer_"], [class*=" connectContainer_"])) { background: var(--tl-raised); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is([class^="separator_"], [class*=" separator_"]) { border-color: var(--tl-rule); }
+:is(.theme-dark, .theme-light) [role="tab"][aria-selected="true"] { font-weight: 650; }
+:is(.theme-dark, .theme-light) :is(input[type="text"], input[type="search"], textarea) { border-radius: max(2px, calc(var(--tl-radius) / 2)); }
+
+/* Settings redesign observed in Discord Desktop 1.0.9257, 2026-09-11. */
+:is(.theme-dark, .theme-light) [class*="modalContentInner_"] { background: var(--tl-surface); }
+:is(.theme-dark, .theme-light) [class*="modal_"] [class*="sidebar_"] { background: var(--tl-canvas); border-inline-end: 1px solid var(--tl-rule); }
+:is(.theme-dark, .theme-light) [class*="modal_"] [role="link"] { border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) [class*="modal_"] [role="link"][class*="active_"] { background: var(--tl-wash); box-shadow: inset 2px 0 var(--tl-accent); }
+:is(.theme-dark, .theme-light) [class*="modal_"] [class*="contentHeader_"] { border-bottom: 1px solid var(--tl-rule); }
+:is(.theme-dark, .theme-light) [class*="modal_"] [class*="sectionLabel_"] { letter-spacing: .05em; font-weight: 700; }

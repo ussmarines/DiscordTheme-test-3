@@ -1,0 +1,11 @@
+:is(.theme-dark, .theme-light) :is([class^="guilds_"], [class*=" guilds_"]) { background: var(--tl-canvas); }
+:is(.theme-dark, .theme-light) :is([class^="sidebarList_"], [class*=" sidebarList_"]) { background: var(--tl-canvas); }
+:is(.theme-dark, .theme-light) :is([class^="panels_"], [class*=" panels_"]) { background: var(--tl-raised); border-color: var(--tl-rule); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is(:is([class^="folderButtonInner_"], [class*=" folderButtonInner_"]), :is([class^="folderGroupBackground_"], [class*=" folderGroupBackground_"])) { background: var(--tl-raised); }
+:is(.theme-dark, .theme-light) :is(:is([class^="link_"], [class*=" link_"]), :is([class^="interactive_"], [class*=" interactive_"])) { transition: background-color var(--tl-motion) ease-out; }
+:is(.theme-dark, .theme-light) :is([class^="link_"], [class*=" link_"]):hover { background: var(--tl-hover); }
+:is(.theme-dark, .theme-light) :is([class^="interactiveSelected_"], [class*=" interactiveSelected_"]) { background: var(--tl-wash); color: var(--tl-ink); }
+:is(.theme-dark, .theme-light) :is([class^="membersGroup_"], [class*=" membersGroup_"]) { color: var(--tl-muted); }
+:is(.theme-dark, .theme-light) :is([class^="members_"], [class*=" members_"]) { background: var(--tl-canvas); }
+:is(.theme-dark, .theme-light) :is([class^="member_"], [class*=" member_"]) { background: transparent; }
+:is(.theme-dark, .theme-light) :is([class^="member_"], [class*=" member_"]):hover { background: var(--tl-hover); }

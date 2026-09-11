@@ -1,0 +1,303 @@
+/**
+ * @name Tally
+ * @author ussmarines
+ * @version 0.1.0
+ * @description A compact communication workspace with ruled surfaces and an amber signal.
+ * @source https://github.com/ussmarines/DiscordTheme-test-3
+ * @website https://github.com/ussmarines/DiscordTheme-test-3
+ */
+
+/* Source: src/tokens/options.css */
+:root {
+  /* Override these in Custom CSS / QuickCSS; mode-specific accents stay readable. */
+  --tl-accent-dark: #f0bd64;
+  --tl-accent-light: #805000;
+  --tl-radius: 3px;
+  --tl-motion: 0ms;
+}
+
+/* Source: src/modes/dark.css */
+.theme-dark {
+  --tl-canvas: #141617;
+  --tl-surface: #1b1e20;
+  --tl-raised: #25292c;
+  --tl-ink: #f0f1ed;
+  --tl-muted: #bcc3c6;
+  --tl-line: #77858c;
+  --tl-accent: hsl(from var(--tl-accent-dark) h calc(s * var(--saturation-factor, 1)) l);
+  --tl-on-accent: #141617;
+  --tl-wash: color-mix(in srgb, var(--tl-accent) 12%, var(--tl-surface));
+  --tl-hover: color-mix(in srgb, var(--tl-ink) 7%, var(--tl-surface));
+  --tl-rule: color-mix(in srgb, var(--tl-line) 40%, var(--tl-surface));
+  --tl-shadow: 0 8px 24px #00000040;
+}
+
+/* Source: src/modes/light.css */
+.theme-light {
+  --tl-canvas: #eceeea;
+  --tl-surface: #fafbf7;
+  --tl-raised: #ffffff;
+  --tl-ink: #20272b;
+  --tl-muted: #4d5a61;
+  --tl-line: #758188;
+  --tl-accent: hsl(from var(--tl-accent-light) h calc(s * var(--saturation-factor, 1)) l);
+  --tl-on-accent: #ffffff;
+  --tl-wash: color-mix(in srgb, var(--tl-accent) 12%, var(--tl-surface));
+  --tl-hover: color-mix(in srgb, var(--tl-ink) 7%, var(--tl-surface));
+  --tl-rule: color-mix(in srgb, var(--tl-line) 40%, var(--tl-surface));
+  --tl-shadow: 0 8px 24px #172d3e18;
+}
+
+/* Source: src/core/discord-vars.css */
+/* Semantic bridge: current visual-refresh tokens plus legacy fallbacks.
+   Status, role colors, spoilers and code syntax remain owned by Discord. */
+:is(.theme-dark, .theme-light) {
+  --background-primary: var(--tl-surface);
+  --background-secondary: var(--tl-canvas);
+  --background-secondary-alt: var(--tl-canvas);
+  --background-tertiary: var(--tl-canvas);
+  --background-floating: var(--tl-raised);
+  --background-base-lowest: var(--tl-canvas);
+  --background-base-lower: var(--tl-surface);
+  --background-base-low: var(--tl-surface);
+  --background-surface-high: var(--tl-raised);
+  --background-surface-higher: var(--tl-raised);
+  --background-surface-highest: var(--tl-raised);
+  --bg-base-primary: var(--tl-surface);
+  --bg-base-secondary: var(--tl-canvas);
+  --bg-base-tertiary: var(--tl-canvas);
+  --bg-surface-overlay: var(--tl-raised);
+  --bg-mod-faint: var(--tl-hover);
+  --bg-mod-subtle: var(--tl-hover);
+  --background-mod-subtle: var(--tl-hover);
+  --background-mod-normal: var(--tl-wash);
+  --background-mod-strong: var(--tl-wash);
+  --background-modifier-hover: var(--tl-hover);
+  --background-modifier-active: var(--tl-wash);
+  --background-modifier-selected: var(--tl-wash);
+  --background-modifier-accent: var(--tl-rule);
+  --background-accent: var(--tl-raised);
+  --background-mentioned: var(--tl-wash);
+  --background-mentioned-hover: var(--tl-hover);
+  --background-message-hover: var(--tl-hover);
+  --message-highlight-background-default: var(--tl-wash);
+  --message-highlight-background-hover: var(--tl-hover);
+  --chat-background-default: var(--tl-surface);
+  --chat-background: var(--tl-surface);
+  --chat-input-container-background: var(--tl-surface);
+  --channeltextarea-background: var(--tl-raised);
+  --channel-text-area-placeholder: var(--tl-muted);
+  --custom-channel-members-bg: var(--tl-canvas);
+  --modal-background: var(--tl-raised);
+  --modal-footer-background: var(--tl-surface);
+  --card-primary-bg: var(--tl-raised);
+  --card-background-default: var(--tl-raised);
+  --input-background: var(--tl-canvas);
+  --input-background-default: var(--tl-canvas);
+  --input-placeholder-text-default: var(--tl-muted);
+  --input-text-default: var(--tl-ink);
+  --input-border-default: var(--tl-line);
+  --input-border-hover: var(--tl-accent);
+  --input-border-focus: var(--tl-accent);
+  --border-subtle: var(--tl-rule);
+  --border-normal: var(--tl-rule);
+  --border-strong: var(--tl-line);
+  --border-faint: var(--tl-rule);
+  --app-border-frame: var(--tl-rule);
+  --text-normal: var(--tl-ink);
+  --text-primary: var(--tl-ink);
+  --text-default: var(--tl-ink);
+  --text-secondary: var(--tl-muted);
+  --text-muted: var(--tl-muted);
+  --text-tertiary: var(--tl-muted);
+  --header-primary: var(--tl-ink);
+  --header-secondary: var(--tl-muted);
+  --channels-default: var(--tl-muted);
+  --interactive-normal: var(--tl-muted);
+  --interactive-hover: var(--tl-ink);
+  --interactive-active: var(--tl-ink);
+  --interactive-text-default: var(--tl-muted);
+  --interactive-text-hover: var(--tl-ink);
+  --interactive-text-active: var(--tl-ink);
+  --interactive-icon-default: var(--tl-muted);
+  --interactive-icon-hover: var(--tl-ink);
+  --interactive-icon-active: var(--tl-ink);
+  --interactive-background-hover: var(--tl-hover);
+  --interactive-background-selected: var(--tl-wash);
+  --text-link: var(--tl-accent);
+  --text-link-low-saturation: var(--tl-accent);
+  --text-brand: var(--tl-accent);
+  --text-brand-default: var(--tl-accent);
+  --focus-primary: var(--tl-accent);
+  --control-brand-foreground: var(--tl-accent);
+  --control-brand-foreground-new: var(--tl-accent);
+  --brand-experiment: var(--tl-accent);
+  --background-brand: var(--tl-accent);
+  --mention-foreground: var(--tl-accent);
+  --mention-background: var(--tl-wash);
+  --scrollbar-auto-thumb: var(--tl-line);
+  --scrollbar-auto-track: var(--tl-canvas);
+  --scrollbar-thin-thumb: var(--tl-line);
+  --scrollbar-thin-track: var(--tl-canvas);
+  --button-secondary-background: var(--tl-raised);
+  --button-secondary-background-hover: var(--tl-hover);
+  --button-secondary-background-active: var(--tl-wash);
+  --button-secondary-text: var(--tl-ink);
+  --button-filled-brand-background: var(--tl-accent);
+  --button-filled-brand-text: var(--tl-on-accent);
+  --button-filled-brand-background-hover: var(--tl-accent);
+  --button-filled-brand-background-active: var(--tl-accent);
+  --control-primary-background-default: var(--tl-accent);
+  --control-primary-background-hover: var(--tl-accent);
+  --control-primary-background-active: var(--tl-accent);
+  --control-primary-text-default: var(--tl-on-accent);
+  --control-primary-text-hover: var(--tl-on-accent);
+  --control-primary-text-active: var(--tl-on-accent);
+  --control-secondary-background-default: var(--tl-raised);
+  --control-secondary-background-hover: var(--tl-hover);
+  --control-secondary-background-active: var(--tl-wash);
+  --control-secondary-text-default: var(--tl-ink);
+  --control-secondary-text-hover: var(--tl-ink);
+  --control-secondary-text-active: var(--tl-ink);
+  --reaction-background-default: var(--tl-raised);
+  --reaction-background-hover: var(--tl-hover);
+  --reaction-background-reacted-default: var(--tl-wash);
+  --reaction-background-reacted-hover: var(--tl-wash);
+  --reaction-border-default: var(--tl-rule);
+  --reaction-border-reacted-default: var(--tl-accent);
+  --reaction-text-default: var(--tl-muted);
+  --reaction-text-reacted-default: var(--tl-ink);
+  --embed-background: var(--tl-raised);
+  --button-border-radius: var(--tl-radius);
+}
+
+/* Current native selection controls; preserve critical/destructive variants. */
+:is(.theme-dark, .theme-light) {
+  --switch-background-selected-default: var(--tl-accent);
+  --switch-background-selected-hover: var(--tl-accent);
+  --switch-thumb-background-selected-default: var(--tl-on-accent);
+  --checkbox-background-selected-default: var(--tl-accent);
+  --checkbox-background-selected-hover: var(--tl-accent);
+  --radio-background-selected-default: var(--tl-accent);
+  --radio-background-selected-hover: var(--tl-accent);
+}
+
+/* Source: src/core/base.css */
+:is(.theme-dark, .theme-light) ::selection { background: var(--tl-accent); color: var(--tl-on-accent); }
+:is(.theme-dark, .theme-light) :is(input, textarea, [contenteditable="true"]) { caret-color: var(--tl-accent); }
+:is(.theme-dark, .theme-light) :is([class^="markup_"], [class*=" markup_"]) a { text-decoration: underline; text-underline-offset: 3px; }
+:is(.theme-dark, .theme-light) :is([class^="timestamp_"], [class*=" timestamp_"]) { font-variant-numeric: tabular-nums; }
+:is(.theme-dark, .theme-light) :is([class^="bg_"], [class*=" bg_"]) { background: var(--tl-canvas); }
+
+/* Source: src/surfaces/navigation.css */
+:is(.theme-dark, .theme-light) :is([class^="guilds_"], [class*=" guilds_"]) { background: var(--tl-canvas); }
+:is(.theme-dark, .theme-light) :is([class^="sidebarList_"], [class*=" sidebarList_"]) { background: var(--tl-canvas); }
+:is(.theme-dark, .theme-light) :is([class^="panels_"], [class*=" panels_"]) { background: var(--tl-raised); border-color: var(--tl-rule); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is(:is([class^="folderButtonInner_"], [class*=" folderButtonInner_"]), :is([class^="folderGroupBackground_"], [class*=" folderGroupBackground_"])) { background: var(--tl-raised); }
+:is(.theme-dark, .theme-light) :is(:is([class^="link_"], [class*=" link_"]), :is([class^="interactive_"], [class*=" interactive_"])) { transition: background-color var(--tl-motion) ease-out; }
+:is(.theme-dark, .theme-light) :is([class^="link_"], [class*=" link_"]):hover { background: var(--tl-hover); }
+:is(.theme-dark, .theme-light) :is([class^="interactiveSelected_"], [class*=" interactiveSelected_"]) { background: var(--tl-wash); color: var(--tl-ink); }
+:is(.theme-dark, .theme-light) :is([class^="membersGroup_"], [class*=" membersGroup_"]) { color: var(--tl-muted); }
+:is(.theme-dark, .theme-light) :is([class^="members_"], [class*=" members_"]) { background: var(--tl-canvas); }
+:is(.theme-dark, .theme-light) :is([class^="member_"], [class*=" member_"]) { background: transparent; }
+:is(.theme-dark, .theme-light) :is([class^="member_"], [class*=" member_"]):hover { background: var(--tl-hover); }
+
+/* Source: src/surfaces/chat.css */
+:is(.theme-dark, .theme-light) :is([class^="chatContent_"], [class*=" chatContent_"]) { background: var(--tl-surface); }
+:is(.theme-dark, .theme-light) :is([class^="channelTextArea_"], [class*=" channelTextArea_"]) { background: var(--tl-raised); border: 1px solid var(--tl-line); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is([class^="channelTextArea_"], [class*=" channelTextArea_"]):focus-within { border-color: var(--tl-accent); }
+:is(.theme-dark, .theme-light) :is([class^="scrollableContainer_"], [class*=" scrollableContainer_"]) { background: transparent; border-radius: inherit; }
+:is(.theme-dark, .theme-light) :is([class^="replyBar_"], [class*=" replyBar_"]) { background: var(--tl-wash); border-radius: var(--tl-radius) var(--tl-radius) 0 0; }
+:is(.theme-dark, .theme-light) :is([class^="reaction_"], [class*=" reaction_"]) { border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is([class^="reactionMe_"], [class*=" reactionMe_"]) { border-color: var(--tl-accent); }
+:is(.theme-dark, .theme-light) :is([class^="embedFull_"], [class*=" embedFull_"]) { border-radius: var(--tl-radius); background: var(--tl-raised); }
+:is(.theme-dark, .theme-light) :is(:is([class^="fileWrapper_"], [class*=" fileWrapper_"]), :is([class^="attachment_"], [class*=" attachment_"])) { border-radius: var(--tl-radius); border-color: var(--tl-rule); }
+:is(.theme-dark, .theme-light) :is([class^="markup_"], [class*=" markup_"]) pre { border: 1px solid var(--tl-rule); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is([class^="markup_"], [class*=" markup_"]) blockquote { border-inline-start-color: var(--tl-line); }
+/* Do not touch spoiler descendants, inline role colors or syntax token colors. */
+
+/* Source: src/surfaces/conversation-shape.css */
+/* Content stays on the ruled plane; hierarchy comes from alignment and weight. */
+:is(.theme-dark, .theme-light) [id^="message-content-"]:not([class*="repliedTextContent_"]) {
+  max-width: 90ch;
+}
+:is(.theme-dark, .theme-light) [class*="repliedMessage_"] {
+  border-bottom: 1px solid var(--tl-rule);
+  padding-block-end: 3px;
+}
+:is(.theme-dark, .theme-light) [class*="reaction_"] {
+  border-radius: 3px;
+}
+
+/* Source: src/surfaces/overlays.css */
+:is(.theme-dark, .theme-light) :is([role="menu"], [role="listbox"]) { background: var(--tl-raised); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) [role="menu"] { box-shadow: var(--tl-shadow); }
+:is(.theme-dark, .theme-light) [role="menuitem"] { border-radius: max(2px, calc(var(--tl-radius) / 2)); }
+:is(.theme-dark, .theme-light) [role="dialog"] { background-color: var(--tl-raised); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is(:is([class^="tooltip_"], [class*=" tooltip_"]), :is([class^="autocomplete_"], [class*=" autocomplete_"]), :is([class^="messagesPopoutWrap_"], [class*=" messagesPopoutWrap_"]), :is([class^="containerRecentMentions_"], [class*=" containerRecentMentions_"]), :is([class^="searchResultsWrap_"], [class*=" searchResultsWrap_"]), :is([class^="emojiPicker_"], [class*=" emojiPicker_"])) { border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is(:is([class^="autocomplete_"], [class*=" autocomplete_"]), :is([class^="messagesPopoutWrap_"], [class*=" messagesPopoutWrap_"]), :is([class^="containerRecentMentions_"], [class*=" containerRecentMentions_"])) { background: var(--tl-raised); box-shadow: var(--tl-shadow); }
+:is(.theme-dark, .theme-light) :is(:is([class^="userPopoutOuter_"], [class*=" userPopoutOuter_"]), :is([class^="userProfileOuter_"], [class*=" userProfileOuter_"])) { border-radius: var(--tl-radius); }
+/* Profile palettes, banners, status badges and premium decoration are preserved. */
+
+/* Inbox redesign exposes a dialog role but no stable container prefix. */
+:is(.theme-dark, .theme-light) [role="dialog"]:has([class*="inboxTitle_"]) { border-radius: var(--tl-radius); overflow: clip; }
+
+/* Source: src/surfaces/settings.css */
+:is(.theme-dark, .theme-light) :is(:is([class^="standardSidebarView_"], [class*=" standardSidebarView_"]), :is([class^="contentRegion_"], [class*=" contentRegion_"])) { background: var(--tl-surface); }
+:is(.theme-dark, .theme-light) :is([class^="sidebarRegion_"], [class*=" sidebarRegion_"]) { background: var(--tl-canvas); }
+:is(.theme-dark, .theme-light) :is(:is([class^="itemCard_"], [class*=" itemCard_"]), :is([class^="connectContainer_"], [class*=" connectContainer_"])) { background: var(--tl-raised); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is([class^="separator_"], [class*=" separator_"]) { border-color: var(--tl-rule); }
+:is(.theme-dark, .theme-light) [role="tab"][aria-selected="true"] { font-weight: 650; }
+:is(.theme-dark, .theme-light) :is(input[type="text"], input[type="search"], textarea) { border-radius: max(2px, calc(var(--tl-radius) / 2)); }
+
+/* Settings redesign observed in Discord Desktop 1.0.9257, 2026-09-11. */
+:is(.theme-dark, .theme-light) [class*="modalContentInner_"] { background: var(--tl-surface); }
+:is(.theme-dark, .theme-light) [class*="modal_"] [class*="sidebar_"] { background: var(--tl-canvas); border-inline-end: 1px solid var(--tl-rule); }
+:is(.theme-dark, .theme-light) [class*="modal_"] [role="link"] { border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) [class*="modal_"] [role="link"][class*="active_"] { background: var(--tl-wash); box-shadow: inset 2px 0 var(--tl-accent); }
+:is(.theme-dark, .theme-light) [class*="modal_"] [class*="contentHeader_"] { border-bottom: 1px solid var(--tl-rule); }
+:is(.theme-dark, .theme-light) [class*="modal_"] [class*="sectionLabel_"] { letter-spacing: .05em; font-weight: 700; }
+
+/* Source: src/surfaces/voice.css */
+:is(.theme-dark, .theme-light) :is([class^="callContainer_"], [class*=" callContainer_"]) { background-color: var(--tl-canvas); }
+:is(.theme-dark, .theme-light) :is([class^="tile_"], [class*=" tile_"]) { border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is([class^="videoControls_"], [class*=" videoControls_"]) { border-radius: var(--tl-radius); }
+/* Keep native red disconnect/mute, green speaking borders and media overlays. */
+
+/* Source: src/core/layout.css */
+:is(.theme-dark, .theme-light) :is([class^="sidebarList_"], [class*=" sidebarList_"]) { border-inline-end: 1px solid var(--tl-rule); border-radius: 0; }
+:is(.theme-dark, .theme-light) :is([class^="page_"], [class*=" page_"]) { border-radius: 0; }
+:is(.theme-dark, .theme-light) :is([class^="chatContent_"], [class*=" chatContent_"]) { border-inline-end: 1px solid var(--tl-rule); }
+:is(.theme-dark, .theme-light) :is([class^="link_"], [class*=" link_"]) { border-radius: var(--tl-radius); margin-block: 0; padding-block: 0; }
+:is(.theme-dark, .theme-light) :is([class^="interactiveSelected_"], [class*=" interactiveSelected_"]) { outline: 1px solid var(--tl-line); outline-offset: -1px; border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is([class^="channelTextArea_"], [class*=" channelTextArea_"]) { border-radius: var(--tl-radius); box-shadow: none; }
+:is(.theme-dark, .theme-light) :is([class^="membersGroup_"], [class*=" membersGroup_"]) { padding-top: 18px; letter-spacing: .06em; font-weight: 700; }
+:is(.theme-dark, .theme-light) :is([class^="message_"], [class*=" message_"]) { border-radius: 0; }
+:is(.theme-dark, .theme-light) :is([class^="groupStart_"], [class*=" groupStart_"]) { border-top: 1px solid var(--tl-rule); padding-top: 6px; }
+:is(.theme-dark, .theme-light) :is([class^="itemCard_"], [class*=" itemCard_"]) { border: 1px solid var(--tl-rule); border-radius: var(--tl-radius); padding: 12px; box-shadow: none; }
+:is(.theme-dark, .theme-light) [role="menu"] { border: 1px solid var(--tl-line); box-shadow: none; }
+:is(.theme-dark, .theme-light) [role="tab"][aria-selected="true"] { background: transparent; border-radius: 0; box-shadow: inset 0 -2px var(--tl-accent); }
+:is(.theme-dark, .theme-light) :is([class^="embedFull_"], [class*=" embedFull_"]) { border-radius: var(--tl-radius); }
+
+/* Source: src/integrations/client-mods.css */
+/* Specific classes only; never blanket-match all vc- or bd- elements. */
+:is(.theme-dark, .theme-light) :is(.vc-addon-card, .bd-addon-card) { background: var(--tl-raised); color: var(--tl-ink); border: 1px solid var(--tl-rule); border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is(.vc-settings-card, .bd-settings-group) { color: var(--tl-ink); }
+:is(.theme-dark, .theme-light) .vc-text-select { background: var(--tl-canvas); color: var(--tl-ink); }
+/* Monaco / QuickCSS editor iframe owns its theme and is not overridden. */
+
+/* Source: src/accessibility.css */
+/* Native Slate uses an important outline reset; this single override restores keyboard focus. */
+:is(.theme-dark, .theme-light) :is(button, a, input, textarea, [role="button"], [role="tab"], [role="menuitem"], [role="switch"], [role="checkbox"], [role="radio"], [role="treeitem"], [role="combobox"], [contenteditable="true"], [tabindex="0"]):focus-visible { outline: 2px solid var(--tl-accent) !important; outline-offset: 2px; }
+:is(.theme-dark, .theme-light) [aria-disabled="true"] { cursor: not-allowed; }
+:is(.theme-dark, .theme-light) [aria-invalid="true"] { outline: 2px dashed var(--text-danger, #c93434); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  :root { --tl-motion: 0ms; }
+}
+.reduce-motion { --tl-motion: 0ms; }
+@media (prefers-contrast: more) {
+  :is(.theme-dark, .theme-light) { --tl-rule: var(--tl-line); }
+}
+@media (forced-colors: active) {
+  :is(.theme-dark, .theme-light) { --tl-canvas: Canvas; --tl-surface: Canvas; --tl-raised: Canvas; --tl-ink: CanvasText; --tl-muted: CanvasText; --tl-accent: Highlight; --tl-on-accent: HighlightText; --tl-line: ButtonText; --tl-rule: ButtonText; --tl-wash: Canvas; --tl-hover: Canvas; --tl-shadow: none; }
+}

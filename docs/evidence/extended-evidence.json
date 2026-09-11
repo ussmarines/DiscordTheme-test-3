@@ -1,0 +1,40 @@
+[
+  {
+    "theme": "Tally",
+    "mode": "dark",
+    "picker": {
+      "found": true,
+      "width": 496,
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    "profile": {
+      "found": true,
+      "width": 300,
+      "background": "rgb(37, 41, 44)"
+    },
+    "search": {
+      "found": true,
+      "results": 3,
+      "background": "rgb(20, 22, 23)"
+    }
+  },
+  {
+    "theme": "Tally",
+    "mode": "light",
+    "picker": {
+      "found": true,
+      "width": 496,
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    "profile": {
+      "found": true,
+      "width": 300,
+      "background": "rgb(255, 255, 255)"
+    },
+    "search": {
+      "found": true,
+      "results": 3,
+      "background": "rgb(236, 238, 234)"
+    }
+  }
+]

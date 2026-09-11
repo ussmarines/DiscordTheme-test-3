@@ -1,0 +1,7 @@
+:root {
+  /* Override these in Custom CSS / QuickCSS; mode-specific accents stay readable. */
+  --tl-accent-dark: #f0bd64;
+  --tl-accent-light: #805000;
+  --tl-radius: 3px;
+  --tl-motion: 0ms;
+}

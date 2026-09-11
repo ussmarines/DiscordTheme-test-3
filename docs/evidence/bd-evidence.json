@@ -1,0 +1,30 @@
+[
+  {
+    "theme": "Tally",
+    "mode": "dark",
+    "bd": true,
+    "vencord": false,
+    "version": "1.14.1",
+    "loaded": true,
+    "cardFound": true,
+    "cardCount": 3,
+    "background": "rgb(37, 41, 44)",
+    "color": "rgb(240, 241, 237)",
+    "radius": "3px",
+    "switches": 3
+  },
+  {
+    "theme": "Tally",
+    "mode": "light",
+    "bd": true,
+    "vencord": false,
+    "version": "1.14.1",
+    "loaded": true,
+    "cardFound": true,
+    "cardCount": 3,
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(32, 39, 43)",
+    "radius": "3px",
+    "switches": 3
+  }
+]

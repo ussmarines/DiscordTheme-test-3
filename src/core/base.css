@@ -1,0 +1,5 @@
+:is(.theme-dark, .theme-light) ::selection { background: var(--tl-accent); color: var(--tl-on-accent); }
+:is(.theme-dark, .theme-light) :is(input, textarea, [contenteditable="true"]) { caret-color: var(--tl-accent); }
+:is(.theme-dark, .theme-light) :is([class^="markup_"], [class*=" markup_"]) a { text-decoration: underline; text-underline-offset: 3px; }
+:is(.theme-dark, .theme-light) :is([class^="timestamp_"], [class*=" timestamp_"]) { font-variant-numeric: tabular-nums; }
+:is(.theme-dark, .theme-light) :is([class^="bg_"], [class*=" bg_"]) { background: var(--tl-canvas); }

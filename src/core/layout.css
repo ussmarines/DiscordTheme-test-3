@@ -1,0 +1,13 @@
+:is(.theme-dark, .theme-light) :is([class^="sidebarList_"], [class*=" sidebarList_"]) { border-inline-end: 1px solid var(--tl-rule); border-radius: 0; }
+:is(.theme-dark, .theme-light) :is([class^="page_"], [class*=" page_"]) { border-radius: 0; }
+:is(.theme-dark, .theme-light) :is([class^="chatContent_"], [class*=" chatContent_"]) { border-inline-end: 1px solid var(--tl-rule); }
+:is(.theme-dark, .theme-light) :is([class^="link_"], [class*=" link_"]) { border-radius: var(--tl-radius); margin-block: 0; padding-block: 0; }
+:is(.theme-dark, .theme-light) :is([class^="interactiveSelected_"], [class*=" interactiveSelected_"]) { outline: 1px solid var(--tl-line); outline-offset: -1px; border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is([class^="channelTextArea_"], [class*=" channelTextArea_"]) { border-radius: var(--tl-radius); box-shadow: none; }
+:is(.theme-dark, .theme-light) :is([class^="membersGroup_"], [class*=" membersGroup_"]) { padding-top: 18px; letter-spacing: .06em; font-weight: 700; }
+:is(.theme-dark, .theme-light) :is([class^="message_"], [class*=" message_"]) { border-radius: 0; }
+:is(.theme-dark, .theme-light) :is([class^="groupStart_"], [class*=" groupStart_"]) { border-top: 1px solid var(--tl-rule); padding-top: 6px; }
+:is(.theme-dark, .theme-light) :is([class^="itemCard_"], [class*=" itemCard_"]) { border: 1px solid var(--tl-rule); border-radius: var(--tl-radius); padding: 12px; box-shadow: none; }
+:is(.theme-dark, .theme-light) [role="menu"] { border: 1px solid var(--tl-line); box-shadow: none; }
+:is(.theme-dark, .theme-light) [role="tab"][aria-selected="true"] { background: transparent; border-radius: 0; box-shadow: inset 0 -2px var(--tl-accent); }
+:is(.theme-dark, .theme-light) :is([class^="embedFull_"], [class*=" embedFull_"]) { border-radius: var(--tl-radius); }

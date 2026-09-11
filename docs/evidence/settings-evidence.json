@@ -1,0 +1,32 @@
+[
+  {
+    "theme": "Tally",
+    "mode": "platform-win theme-dark images-dark density-default font-size-16 keyboard-mode has-webkit-scrollbar full-motion app-focused visual-refresh hardware-acceleration-disabled",
+    "cssMode": "theme-dark images-dark modalContentInner_e44912",
+    "ink": "rgb(240, 241, 237)",
+    "surface": "rgb(27, 30, 32)",
+    "accent": "hsl(from #f0bd64 h calc(s * 1) l)",
+    "clip": {
+      "x": 112.5,
+      "y": 72,
+      "width": 1400,
+      "height": 935,
+      "scale": 1
+    }
+  },
+  {
+    "theme": "Tally",
+    "mode": "platform-win theme-light images-light density-default font-size-16 keyboard-mode has-webkit-scrollbar full-motion app-focused visual-refresh hardware-acceleration-disabled",
+    "cssMode": "theme-light images-light modalContentInner_e44912",
+    "ink": "rgb(32, 39, 43)",
+    "surface": "rgb(250, 251, 247)",
+    "accent": "hsl(from #805000 h calc(s * 1) l)",
+    "clip": {
+      "x": 112.5,
+      "y": 72,
+      "width": 1400,
+      "height": 935,
+      "scale": 1
+    }
+  }
+]

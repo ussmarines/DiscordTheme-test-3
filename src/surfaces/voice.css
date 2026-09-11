@@ -1,0 +1,4 @@
+:is(.theme-dark, .theme-light) :is([class^="callContainer_"], [class*=" callContainer_"]) { background-color: var(--tl-canvas); }
+:is(.theme-dark, .theme-light) :is([class^="tile_"], [class*=" tile_"]) { border-radius: var(--tl-radius); }
+:is(.theme-dark, .theme-light) :is([class^="videoControls_"], [class*=" videoControls_"]) { border-radius: var(--tl-radius); }
+/* Keep native red disconnect/mute, green speaking borders and media overlays. */

@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-11",
+  "version": "0.1.0",
+  "screenshotsClient": "Vencord on Discord Desktop 1.0.9257",
+  "privacyReview": "All four final native PNGs visually reviewed; test messages only, names/avatars masked, private guild rail cropped.",
+  "files": [
+    {
+      "path": "dist/Tally.theme.css",
+      "bytes": 19768,
+      "sha256": "cee53bc0ba679f8ecbb9c6d120e915e6f63b499b8a35324881870d592fc08fcc"
+    },
+    {
+      "path": "assets/donate.svg",
+      "bytes": 273,
+      "sha256": "c0b8e337761f5a39dbfb8e0d2e022a797eb6b460eb570b462a9a2879c9eea4e4"
+    },
+    {
+      "path": "assets/logo.svg",
+      "bytes": 223,
+      "sha256": "55500aae1362caa9be2bb79d010bac96bb1998424a73afdfa13797baeac1d96f"
+    },
+    {
+      "path": "screenshots/dark-main.png",
+      "bytes": 189010,
+      "sha256": "7c0cdbf988e97bd63d99ca31fdd02f4e83a1e0a8e95b4c11da9f86fb43391639"
+    },
+    {
+      "path": "screenshots/dark-settings.png",
+      "bytes": 152787,
+      "sha256": "d8a8dd12fcc7c53b8da615c399582c95440c9a7f787f14e2f007a280680fff1b"
+    },
+    {
+      "path": "screenshots/light-main.png",
+      "bytes": 189936,
+      "sha256": "01783d0e8f1f5eefb0d29e60cb55575f7e1cb21809f4475a8b3330505b43030f"
+    },
+    {
+      "path": "screenshots/light-settings.png",
+      "bytes": 151676,
+      "sha256": "07e3cd553a2ee8f5adf3b44efe67bc9367b8f15744d2768d7da7309c7d6aa38c"
+    }
+  ]
+}

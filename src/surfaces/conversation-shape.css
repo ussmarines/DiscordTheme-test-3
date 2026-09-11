@@ -1,0 +1,11 @@
+/* Content stays on the ruled plane; hierarchy comes from alignment and weight. */
+:is(.theme-dark, .theme-light) [id^="message-content-"]:not([class*="repliedTextContent_"]) {
+  max-width: 90ch;
+}
+:is(.theme-dark, .theme-light) [class*="repliedMessage_"] {
+  border-bottom: 1px solid var(--tl-rule);
+  padding-block-end: 3px;
+}
+:is(.theme-dark, .theme-light) [class*="reaction_"] {
+  border-radius: 3px;
+}
