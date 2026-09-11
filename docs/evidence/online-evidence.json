@@ -1,0 +1,32 @@
+{
+  "theme": "Tally",
+  "date": "2026-09-11",
+  "url": "https://raw.githubusercontent.com/ussmarines/DiscordTheme-test-3/main/dist/Tally.theme.css",
+  "httpStatus": 200,
+  "bytes": 19768,
+  "sha256": "cee53bc0ba679f8ecbb9c6d120e915e6f63b499b8a35324881870d592fc08fcc",
+  "matchesLocal": true,
+  "onlineLoaded": true,
+  "modes": [
+    {
+      "mode": "dark",
+      "dark": true,
+      "background": "rgb(27, 30, 32)",
+      "accent": "hsl(from #f0bd64 h calc(s * 1) l)",
+      "localThemes": [],
+      "onlineLinks": [
+        "https://raw.githubusercontent.com/ussmarines/DiscordTheme-test-3/main/dist/Tally.theme.css"
+      ]
+    },
+    {
+      "mode": "light",
+      "dark": false,
+      "background": "rgb(250, 251, 247)",
+      "accent": "hsl(from #805000 h calc(s * 1) l)",
+      "localThemes": [],
+      "onlineLinks": [
+        "https://raw.githubusercontent.com/ussmarines/DiscordTheme-test-3/main/dist/Tally.theme.css"
+      ]
+    }
+  ]
+}

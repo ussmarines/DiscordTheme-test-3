@@ -15,7 +15,7 @@ Tested 2026-09-11 in real Discord Desktop, with BetterDiscord and Vencord loaded
 | Inbox | PASS | PASS | Opens and renders. Private content excluded from screenshots. |
 | Modals | PASS | PASS | Appearance and theme settings; upload/delete/permissions flows not executed. |
 | Discord settings | PASS | PASS | Native Appearance controls and palette switch. |
-| Vencord | PASS | PASS | Local theme recognition, plugin cards/switches, Online Themes form. External QuickCSS editor not tested. |
+| Vencord | PASS | PASS | Local theme recognition, plugin cards/switches, Online Themes form and actual raw URL loading in both modes. External QuickCSS editor not tested. |
 | BetterDiscord | PASS | PASS | Standalone 1.14.1, theme manager, switches, real client rendering. |
 | Voice | NOT TESTED | NOT TESTED | Voice rows styled; calls, camera and screen-share not started. |
 | Reduced motion | PASS | PASS | Browser media emulation resolves authored duration to 0ms. |
@@ -46,3 +46,9 @@ Evidence JSON contains only component metrics and theme state, never account ide
 The core rendering and local theme-manager checks were run in both mods. Extended picker, own mini-profile and server-search probes were run in Vencord. JSON menu container color is not the item text color: native menu items set their own semantic foreground. One initial BetterDiscord spoiler probe read React state before its update; subsequent BD observations and the corrected asynchronous Vencord probe confirmed reveal behavior. No unobserved state is inferred from a successful CSS parse.
 
 Reproduction: enable only this theme, select Cendres/Clair in Appearance, use an isolated server with authorized text/code/quote/embed/spoiler/reply/reaction examples, inspect core panels and settings, open/dismiss menus and inbox, search the server, and repeat at 1000×760 with keyboard focus and reduced-motion emulation. Do not reuse private conversations as fixtures.
+
+## Published distribution
+
+The main-branch raw URL returned HTTP 200. Its SHA-256 matched the local distribution. With local themes disabled, Vencord fetched that URL and rendered the expected chat palette in both modes. See online-evidence.json.
+
+After QA, native Cendres appearance and the original Vencord theme settings were restored. QuickCSS and the original Vencord bootstrap matched their backups. The three local theme files remain installed but disabled. Theme Lab and its authorized demonstration messages remain available.
